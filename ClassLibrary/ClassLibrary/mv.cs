@@ -7,8 +7,9 @@ using ClassLibraryKacper;
 
 namespace ClassLibrary
 {
-    public class cp:Feature
+    public class mv:Feature
     {
-        public cp(string[] help):base(help) { }
+        public mv(string[] help) : base(help) { }
+
     }
 }
