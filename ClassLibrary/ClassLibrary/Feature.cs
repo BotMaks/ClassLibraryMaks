@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class Feature
+    public abstract class Feature
     {
         string[] help { get; set; }
         public Feature(string[] help)
@@ -21,7 +21,6 @@ namespace ClassLibrary
                 Console.WriteLine(line);
             }
         }
-
         public override string ToString()
         {
             GetHelp();

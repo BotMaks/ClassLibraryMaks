@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using ClassLibraryKacper;
+using ClassLibrary;
 
 
 namespace Konsola
@@ -12,17 +12,26 @@ namespace Konsola
     {
         static void Main(string[] args)
         {
-            //Features feat = new Features();
+            bool exit = false;
+            Features feat = new Features();
             string com;
-            Console.WriteLine("Zadanie dodatkowe \n----------------\n");
-            com = Console.ReadLine();
-
-            if (com == "help" || com == "?")
+            Console.WriteLine("Zadanie dodatkowe \n----------------");
+            do
             {
-                
-            }
+                com = Console.ReadLine();
+                com = com.Trim();
+                string[] help = com.Split();
+                if (help[0] == "help" || help[0] == "?")
+                {
+                    feat.GetFeatureHelp(com);
+                }
+                if (com != "" || com != null) 
+                {
+                    feat.CommandHandler(com);
+                }
+                if(com == "exit") { exit = true; }
 
-            if(com == "exit") { }
+            } while (exit == false);
         }
     }
 }
