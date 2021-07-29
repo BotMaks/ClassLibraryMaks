@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A479B7D2-4F0E-4BC6-9D0D-A2AB1E0BDC24}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary</RootNamespace>
-    <AssemblyName>ClassLibrary</AssemblyName>
+    <ProjectGuid>{A309F25B-E73B-4169-915B-CAC1788C44B6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Konsola</RootNamespace>
+    <AssemblyName>Konsola</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,14 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassMaks.cs" />
-    <Compile Include="cp.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ClassLibraryKacper\ClassLibrary\ClassLibrary\ClassLibraryKacper.csproj">
       <Project>{b5d66c7c-6283-4162-b9dc-dfdc5b1fe9c5}</Project>
       <Name>ClassLibraryKacper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibraryMaks.csproj">
+      <Project>{a479b7d2-4f0e-4bc6-9d0d-a2ab1e0bdc24}</Project>
+      <Name>ClassLibraryMaks</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

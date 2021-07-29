@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{A479B7D2-4F0E-4BC6-9D0D-A2AB1E0BDC24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryMaks", "ClassLibrary\ClassLibraryMaks.csproj", "{A479B7D2-4F0E-4BC6-9D0D-A2AB1E0BDC24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryKacper", "..\ClassLibraryKacper\ClassLibrary\ClassLibrary\ClassLibraryKacper.csproj", "{B5D66C7C-6283-4162-B9DC-DFDC5B1FE9C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsola", "Konsola\Konsola.csproj", "{A309F25B-E73B-4169-915B-CAC1788C44B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B5D66C7C-6283-4162-B9DC-DFDC5B1FE9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5D66C7C-6283-4162-B9DC-DFDC5B1FE9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5D66C7C-6283-4162-B9DC-DFDC5B1FE9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A309F25B-E73B-4169-915B-CAC1788C44B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A309F25B-E73B-4169-915B-CAC1788C44B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A309F25B-E73B-4169-915B-CAC1788C44B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A309F25B-E73B-4169-915B-CAC1788C44B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

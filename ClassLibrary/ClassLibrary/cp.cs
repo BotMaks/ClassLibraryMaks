@@ -7,7 +7,7 @@ using ClassLibraryKacper;
 
 namespace ClassLibrary
 {
-    public class Class1
+    class cp:Features
     {
 
     }
