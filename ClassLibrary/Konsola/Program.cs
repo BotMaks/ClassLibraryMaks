@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary;
-
+//using ClassLibraryKacper;
 
 
 namespace Konsola
@@ -13,20 +12,17 @@ namespace Konsola
     {
         static void Main(string[] args)
         {
+            //Features feat = new Features();
             string com;
             Console.WriteLine("Zadanie dodatkowe \n----------------\n");
             com = Console.ReadLine();
 
             if (com == "help" || com == "?")
             {
-
+                
             }
 
             if(com == "exit") { }
-            /*foreach(string[] comand in maks.GetFeatures())
-            {
-
-            }*/
         }
     }
 }

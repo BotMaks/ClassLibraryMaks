@@ -41,15 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassMaks.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="mv.cs" />
     <Compile Include="cp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\ClassLibraryKacper\ClassLibrary\ClassLibrary\ClassLibraryKacper.csproj">
-      <Project>{b5d66c7c-6283-4162-b9dc-dfdc5b1fe9c5}</Project>
-      <Name>ClassLibraryKacper</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
