@@ -15,7 +15,6 @@ namespace ClassLibrary
         {
             if (File.Exists(target))
             {
-                //string path = Directory.GetCurrentDirectory();
                 File.Copy(target, destination, true);
             }
             else { Console.WriteLine("Podany plik do skopiowania nie istnieje"); }
@@ -29,7 +28,6 @@ namespace ClassLibrary
                 string name = temp[temp.Length - 1];
                 destination += name;
                 Directory.CreateDirectory(destination);
-                //DirectoryCopy(target, destination, true);
             }
             else { Console.WriteLine("Podany katalog do skopiowania nie istnieje"); }
         }

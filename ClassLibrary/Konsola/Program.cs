@@ -25,7 +25,7 @@ namespace Konsola
                 {
                     feat.GetFeatureHelp(com);
                 }
-                if (com != "" || com != null) 
+                else if (com != "" || com != null) 
                 {
                     feat.CommandHandler(com);
                 }
