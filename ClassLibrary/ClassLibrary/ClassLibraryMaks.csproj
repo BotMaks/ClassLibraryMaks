@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Feature.cs" />
     <Compile Include="Features.cs" />
+    <Compile Include="gzip.cs" />
     <Compile Include="mv.cs" />
     <Compile Include="cp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,10 +15,20 @@ namespace ClassLibrary
         {
             if (File.Exists(target)) 
             {
+                if (!Directory.Exists(destination)) 
+                {
+                    Console.WriteLine("Podana ścieżka do której chcesz przenieść plik nie istnieje");
+                    return;
+                }
                 System.IO.File.Move(target, destination);
             }
             else if (Directory.Exists(target)) 
             {
+                if (Directory.Exists(destination)) 
+                {
+                    Console.WriteLine("Podana ścieżka do której chcesz przenieśc folder nie istnieje");
+                    return;
+                }
                 System.IO.Directory.Move(target, destination); 
             }
             else { Console.WriteLine("Podany plik/katalog do przeniesienia nie istnieje"); }

@@ -13,23 +13,35 @@ namespace ClassLibrary
 
         public void Work(string target, string destination) 
         {
-            if (File.Exists(target))
+            if (!File.Exists(target))
             {
-                File.Copy(target, destination, true);
+                Console.WriteLine("Podany plik do skopiowania nie istnieje");
+                return;
             }
-            else { Console.WriteLine("Podany plik do skopiowania nie istnieje"); }
+            if (Directory.Exists(destination)) 
+            {
+                Console.WriteLine("Podana ścieżka do której chcesz skopiowac plik nie istnieje");
+                return;
+            }
+            File.Copy(target, destination, true);
             
         }
         public void WorkR(string target, string destination) 
         {
-            if (Directory.Exists(target))
+            if (!Directory.Exists(target))
             {
-                string[] temp = target.Split('/');
-                string name = temp[temp.Length - 1];
-                destination += name;
-                Directory.CreateDirectory(destination);
+                Console.WriteLine("Podany katalog do skopiowania nie istnieje");
+                return;
             }
-            else { Console.WriteLine("Podany katalog do skopiowania nie istnieje"); }
+            if (!Directory.Exists(destination)) 
+            {
+                Console.WriteLine("Podana ścieżka do której chcesz skopiowac folder nie istnieje");
+                return;
+            }
+            string[] temp = target.Split('/');
+            string name = temp[temp.Length - 1];
+            destination += name;
+            Directory.CreateDirectory(destination);
         }
     }
 }

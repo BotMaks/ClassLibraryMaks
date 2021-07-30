@@ -14,6 +14,7 @@ namespace ClassLibrary
             features.Add("cp", new cp(new string[] { "cp [ścieżka do plik1] [ścieżka do plik2] - kopiuje podany plik do podanego miejsca", "cp -r [ścieżka do katalog1] [ścieżka do katalogu2] - kopiuje podany folder do podanego miejsca" }));
             features.Add("mv", new mv(new string[] { "mv [ścieżka do plik1/folder1] [ścieżka do plik2/folder2] - kopiuje podany plik/folder do podanego miejsca" }));
             features.Add("rm", new rm(new string[] { "rm [ścieżka do plik1/folder1] - usuwa podany plik/folder", "rm -r [ścieżka do folderu] - usuwa całą strukturę we wskazanym folderze łącznie z nim samym" }));
+            features.Add("gzip", new gzip(new string[] { "gzip [ścieżka do plik1] - kompresuje podany plik do GZIP", "gunzip [ścieżka do plik1] - dekompresuje podany plik z GZIP" }));
         }
 
         public void GetFeatureHelp(string command)
@@ -75,7 +76,36 @@ namespace ClassLibrary
             }
             else if (com[0] == "rm")
             {
-
+                rm temp;
+                temp = (rm)features["rm"];
+                if(com.Length > 4)
+                {
+                    Console.WriteLine("Zła składnia");
+                    return;
+                }
+                if (com[1] == "-r") 
+                {
+                    temp.WorkR(com[2]);
+                    return;
+                }
+                if(com.Length == 3)
+                {
+                    Console.WriteLine("Podano zły modyfikator");
+                    return;
+                }
+                temp.Work(com[2]);
+            }
+            else if (com[0] == "gzip" || com[0] == "gunzip")
+            {
+                gzip temp;
+                temp = (gzip)features["gzip"];
+                if(com.Length > 2) 
+                {
+                    Console.WriteLine("Zła składnia");
+                    return;
+                }
+                if (com[0] == "gzip") { }
+                if(com[0] == "gunzip") { }
             }
             else
             {
