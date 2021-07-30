@@ -16,14 +16,14 @@ namespace ClassLibrary
             features.Add("mv", new mv(new string[] { "mv [ścieżka do plik1/folder1] [ścieżka do plik2/folder2] - kopiuje podany plik/folder do podanego miejsca" }));
             features.Add("rm", new rm(new string[] { "rm [ścieżka do plik1/folder1] - usuwa podany plik/folder", "rm -r [ścieżka do folderu] - usuwa całą strukturę we wskazanym folderze łącznie z nim samym" }));
             features.Add("gzip", new gzip(new string[] { "gzip [ścieżka do plik1] - kompresuje podany plik do GZIP", "gunzip [ścieżka do plik1] - dekompresuje podany plik z GZIP" }));
-            /*features.Add("ls", new ls(new string[] { "ls - wyswietlenie plikow", "ls -l - nie dziala", "ls -la - wyswietlenie" +
+            features.Add("ls", new ls(new string[] { "ls - wyswietlenie plikow", "ls -l - nie dziala", "ls -la - wyswietlenie" +
                 "wszystkich plikow, w tym ukrytych, oraz folderow" }));
             features.Add("cd", new cd(new string[] { "cd - przemieszczanie sie po sciezkach. napisz 'cd ..' aby wyjsc" +
                 "z aktualnej sciezki, lub 'cd [folder]' aby wejsc do folderu."}));
             features.Add("md5sum", new md5sum(new string[] { "md5sum - wyliczenie sumy kontrolnej pliku z aktualnego folderu." +
                 " Skladnia 'md5sum [file]'"}));
             features.Add("sha256sum", new sha256sum(new string[] { "sha256sum - wyliczenie sumy kontrolnej pliku" +
-                "z aktualnego folderu. Skladnia 'sha256sum [file]'"}));*/
+                "z aktualnego folderu. Skladnia 'sha256sum [file]'"}));
         }
 
         public void GetFeatureHelp(string command)
