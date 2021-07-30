@@ -13,6 +13,7 @@ namespace ClassLibrary
         {
             features.Add("cp", new cp(new string[] { "cp [ścieżka do plik1] [ścieżka do plik2] - kopiuje podany plik do podanego miejsca", "cp -r [ścieżka do katalog1] [ścieżka do katalogu2] - kopiuje podany folder do podanego miejsca" }));
             features.Add("mv", new mv(new string[] { "mv [ścieżka do plik1/folder1] [ścieżka do plik2/folder2] - kopiuje podany plik/folder do podanego miejsca" }));
+            features.Add("rm", new rm(new string[] { "rm [ścieżka do plik1/folder1] - usuwa podany plik/folder", "rm -r [ścieżka do folderu] - usuwa całą strukturę we wskazanym folderze łącznie z nim samym" }));
         }
 
         public void GetFeatureHelp(string command)
@@ -44,17 +45,37 @@ namespace ClassLibrary
             {
                 cp temp;
                 temp = (cp)features["cp"];
+                if (com.Length > 4 || com.Length < 3) 
+                { 
+                    Console.WriteLine("Zła składnia"); 
+                    return; 
+                }
                 if (com[1] == "-r")
                 {
                     temp.WorkR(com[1], com[2]);
                     return;
                 }
-                else if (com.Length == 4)
+                if (com.Length == 4)
                 {
                     Console.WriteLine("Podano zły modyfikator");
                     return;
                 }
                 temp.Work(com[1], com[2]);
+            }
+            else if(com[0] == "mv")
+            {
+                mv temp;
+                temp = (mv)features["mv"];
+                if(com.Length != 3) 
+                {
+                    Console.WriteLine("Zła składnia");
+                    return;
+                }
+                temp.Work(com[1], com[2]);
+            }
+            else if (com[0] == "rm")
+            {
+
             }
             else
             {
